@@ -2,6 +2,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { useState, useEffect, useRef } from 'react';
 
+import { elementScrollIntoView } from "seamless-scroll-polyfill";
+
 const Nav = styled.nav`
     background: #1B242F;
     color: #FCFCFC;
@@ -108,7 +110,12 @@ const Navbar = () => {
 
 
     const scrollToElement = (idName: string): void => {
-        document.getElementById(`${idName}`)!.scrollIntoView({behavior: 'smooth'});
+        const element = document.getElementById(`${idName}`)
+        
+        if (element) {
+            elementScrollIntoView(element, { behavior: "smooth", block: "center", inline: "center" });
+        }
+
         return
     }
 

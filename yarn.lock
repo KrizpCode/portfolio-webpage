@@ -2870,6 +2870,11 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
 
+"seamless-scroll-polyfill@^2.1.2":
+  "integrity" "sha512-UdrRjPXKWUg3m9IL9EPrnFN58UanjtdQ6JVqJHk2rKr1iO1mPKtCmtjVyZnS2414Ibi7W/iduqDbfGQAvButyQ=="
+  "resolved" "https://registry.npmjs.org/seamless-scroll-polyfill/-/seamless-scroll-polyfill-2.1.2.tgz"
+  "version" "2.1.2"
+
 "semver@^6.0.0":
   "integrity" "sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz"

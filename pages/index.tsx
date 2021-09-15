@@ -24,11 +24,11 @@ const Home: NextPage = () => {
       <Navbar />
       <Header />
       <ShapedSection />
-      <Quote />
+      <Quote quoteNumber={0}/>
       <MultipleShapedSection />
       <About />
       <ReversedMultipleShapedSection />
-      <Quote />
+      <Quote quoteNumber={1}/>
       <MultipleShapedSection />
       <Projects />
       <ArrowSection />
