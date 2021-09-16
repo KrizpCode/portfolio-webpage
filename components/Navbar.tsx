@@ -131,10 +131,11 @@ const Navbar = () => {
 
     useEffect(() => {
         document.addEventListener('click', handleClickOutside);
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
             document.removeEventListener('click', handleClickOutside);
+            window.removeEventListener('scroll', handleScroll);
         }
     })
 
