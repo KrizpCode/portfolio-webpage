@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactSection = styled.section`
     background: #252934;
@@ -75,6 +76,15 @@ const Contact = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
+
+        emailjs.sendForm(
+            'service_e9a1xtp',
+            'template_15uhwqm',
+            e.target as HTMLFormElement,
+            'user_y22ixgVbHX10ykOHCmmRa'
+        ).then( res => {
+            console.log(res);
+        }).catch( err => console.error(err));
 
         if (!name || !email || !message) {
             return;

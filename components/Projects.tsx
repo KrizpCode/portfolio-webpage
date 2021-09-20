@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { createClient, EntryCollection } from 'contentful';
+import { useState, useEffect } from 'react';
+
+import { IProjectFields } from '../src/schema/generated/contentful';
+
 
 const ProjectsSection = styled.section`
     display: flex;
@@ -17,12 +22,32 @@ const Pinkish = styled.p`
     color: #E31B6D;
 `
 
+const client = createClient({
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
+    accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY!,
+});
+
 const Projects = () => {
+    const [projects, setProjects] = useState<null | EntryCollection<IProjectFields>>(null)
+
+    useEffect(() => {
+        client
+        .getEntries<IProjectFields>()
+        .then((results) => {
+            setProjects(results)
+        })
+        .catch((error) => console.error(error));
+    }, []);
+
     return (
         <ProjectsSection id="projects">
-            <p>Projects</p>
-            <Blueish>Projects</Blueish>
-            <Pinkish>Projects</Pinkish>
+            {projects && projects.items.map((project, i) => (
+                    <div key={i}>
+                        <h2>{project.fields.title}</h2>
+                        <img src={project.fields.featuredImage.fields.file.url} alt='image'/>
+                    </div>
+                )
+            )}
         </ProjectsSection>
     )
 }
