@@ -104,7 +104,6 @@ const Quote = ({ quoteNumber }: Props) => {
                 },
                 x: 0,
                 opacity: 1,
-                pin: '#quote',
                 ease: 'none',
                 duration: 2,
             })
@@ -119,7 +118,6 @@ const Quote = ({ quoteNumber }: Props) => {
                     scrub: 1,
                 },
                 x: 0,
-                pin: '#quote',
                 opacity: 1,
                 ease: 'none',
                 duration: 2,
@@ -135,7 +133,6 @@ const Quote = ({ quoteNumber }: Props) => {
                     scrub: 1,
                 },
                 opacity: 1,
-                pin: '#quote',
                 ease: 'none',
                 duration: 2,
             })

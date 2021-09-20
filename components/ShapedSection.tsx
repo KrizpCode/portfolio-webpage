@@ -5,6 +5,8 @@ const BackgroundDiv = styled.div`
     background: #3A3F51;
     position: relative;
     height: 140px;
+    margin-top: -2px;
+    margin-bottom: -1px;
 `
 
 const WaveShapedDiv = styled.div`

@@ -4,6 +4,8 @@ const BackgroundDiv = styled.div`
     width: 100%;
     position: relative;
     height: 100px;
+    margin-top: -1px;
+    margin-bottom: -1px;
 `
 
 const ArrowShapedDiv = styled.div`
