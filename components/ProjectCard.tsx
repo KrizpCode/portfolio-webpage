@@ -3,6 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { EntryCollection } from 'contentful';
 
 
+
 import { IProjectFields } from '../src/schema/generated/contentful';
 
 const Card = styled.div`

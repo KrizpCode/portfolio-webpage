@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { useState, useEffect, useRef } from 'react';
 
+import { Link } from 'react-scroll';
+// import * as Scroll from 'react-scroll';
+
+
 import { elementScrollIntoView } from "seamless-scroll-polyfill";
 
 const Nav = styled.nav`
@@ -16,15 +20,15 @@ const Nav = styled.nav`
     left: 0;
     padding: 10px 20px;
     z-index: 999;
-`
 
-const StyledLink = styled.a`
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.4s ease-in-out;
+    & a {
+            font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.4s ease-in-out;
 
-    &:hover {
-        color: #E31B6D;
+        &:hover {
+            color: #E31B6D;
+        }
     }
 `
 
@@ -107,17 +111,6 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
-
-    const scrollToElement = (idName: string): void => {
-        const element = document.getElementById(`${idName}`)
-        
-        if (element) {
-            elementScrollIntoView(element, { behavior: "smooth", block: "start", inline: "center" });
-        }
-
-        return
-    }
-
     const handleClickOutside = (event: Event) => {
         if (ref.current && !ref.current.contains(event.target as Node)) {
             setIsOpen(false);
@@ -151,10 +144,10 @@ const Navbar = () => {
             </BurgerMenuWrapper>
             <MobileMenu
                 className={`${isOpen ? 'open' : ''}`}>
-                <StyledLink onClick={() => scrollToElement('header')}>Home</StyledLink>
-                <StyledLink onClick={() => scrollToElement('about')}>About</StyledLink>
-                <StyledLink onClick={() => scrollToElement('projects')}>Projects</StyledLink>
-                <StyledLink onClick={() => scrollToElement('contact')}>Contact</StyledLink>
+                <Link to="header" smooth={true} duration={1000}>Home</Link>
+                <Link to="about" smooth={true} duration={1000}>About</Link>
+                <Link to="projects" smooth={true} duration={1000}>Projects</Link>
+                <Link to="contact" smooth={true} duration={1000}>Contact</Link>
             </MobileMenu>
         </Nav>
     )

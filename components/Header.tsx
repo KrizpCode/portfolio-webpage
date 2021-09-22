@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { elementScrollIntoView } from "seamless-scroll-polyfill";
 
+import { Link } from 'react-scroll';
+
+
 import ScrollDownAnimation from "./ScrollDownAnimation"
 
 const HeaderSection = styled.section`
@@ -61,24 +64,16 @@ const WorkButton = styled.button`
 `
 
 const Header = () => {
-    const scrollToProjects = (): void => {
-        const element = document.getElementById(`projects`)
-        
-        if (element) {
-            elementScrollIntoView(element, { behavior: "smooth", block: "start", inline: "center" });
-        }
-
-        return
-    }
-
     return (
         <HeaderSection id="header">
             <Wrapper>
-            <HelloHeading>Hello,</HelloHeading>
-            <SubHeading>I&apos;m <NameSpan>Johan Eriksson</NameSpan></SubHeading>
-            <SubHeading>a <WorkSpan>Full-Stack Developer</WorkSpan></SubHeading>
+                <HelloHeading>Hello,</HelloHeading>
+                <SubHeading>I&apos;m <NameSpan>Johan Eriksson</NameSpan></SubHeading>
+                <SubHeading>a <WorkSpan>Full-Stack Developer</WorkSpan></SubHeading>
             </Wrapper>
-            <WorkButton onClick={() => scrollToProjects()}>My Projects</WorkButton>
+            <Link to="projects" smooth={true} duration={1000}>
+                <WorkButton>My Projects</WorkButton>
+            </Link>
             <ScrollDownAnimation />
         </HeaderSection>
     )

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
-import { elementScrollIntoView } from "seamless-scroll-polyfill";
+import { animateScroll as scroll } from 'react-scroll';
+// import { elementScrollIntoView } from "seamless-scroll-polyfill";
 
 const FooterSection = styled.footer`
     background: #1B242F;
@@ -35,19 +35,9 @@ const FooterLink = styled.a`
 `
 
 const Footer = () => {
-    const scrollToTop = (): void => {
-        const element = document.getElementById(`header`)
-        
-        if (element) {
-            elementScrollIntoView(element, { behavior: "smooth", block: "start", inline: "center" });
-        }
-
-        return
-    }
-
     return (
         <FooterSection>
-            <ToTopLink onClick={() => scrollToTop()}>^</ToTopLink>
+            <ToTopLink onClick={() => scroll.scrollToTop()}>^</ToTopLink>
             <FooterLink href="https://github.com/KrizpCode">GitHub</FooterLink>
             <FooterLink href="https://www.linkedin.com/in/johaneriksson93/">LinkedIn</FooterLink>
         </FooterSection>
