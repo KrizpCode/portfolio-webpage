@@ -6,9 +6,8 @@
   "scripts": {
     "lint": "next lint --no-cache",
     "codegen": "contentful-typescript-codegen --output src/schema/generated/contentful.d.ts",
-    "replaceFilePaths": "node replacer.js",
     "dev": "next dev",
-    "build": "next build && next export -o build && npm run replaceFilePaths",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
