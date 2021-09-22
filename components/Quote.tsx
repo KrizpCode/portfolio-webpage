@@ -142,8 +142,8 @@ const Quote = ({ quoteNumber }: Props) => {
     return (
         <QuoteSection id='quote'>
             <QuoteContainer>
-                <LeftHeading className="opacityLeft"><span>"</span>{`${quotesArray[quoteNumber].leftHeading.toUpperCase()}`}</LeftHeading>
-                <RightHeading className="opacityRight">{`${quotesArray[quoteNumber].rightHeading.toUpperCase()}`}<span>"</span></RightHeading>
+                <LeftHeading className="opacityLeft"><span>&quot;</span>{`${quotesArray[quoteNumber].leftHeading.toUpperCase()}`}</LeftHeading>
+                <RightHeading className="opacityRight">{`${quotesArray[quoteNumber].rightHeading.toUpperCase()}`}<span>&quot;</span></RightHeading>
                 <QuoteName className="opacityCenter"><span>-</span>{` ${quotesArray[quoteNumber].name} `}<span>-</span></QuoteName>
                 </QuoteContainer>
         </QuoteSection>

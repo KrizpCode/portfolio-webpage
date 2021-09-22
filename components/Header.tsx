@@ -75,7 +75,7 @@ const Header = () => {
         <HeaderSection id="header">
             <Wrapper>
             <HelloHeading>Hello,</HelloHeading>
-            <SubHeading>I'm <NameSpan>Johan Eriksson</NameSpan></SubHeading>
+            <SubHeading>I&apos;m <NameSpan>Johan Eriksson</NameSpan></SubHeading>
             <SubHeading>a <WorkSpan>Full-Stack Developer</WorkSpan></SubHeading>
             </Wrapper>
             <WorkButton onClick={() => scrollToProjects()}>My Projects</WorkButton>

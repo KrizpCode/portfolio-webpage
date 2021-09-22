@@ -144,7 +144,7 @@ const About = () => {
                     <CustomImage src="/johan-eriksson.jpg" alt="hello"/>
                     <TextContainer>
                         <h3>Johan Eriksson</h3>
-                        <p>A Full-Stack JavaScript developer with a passion for coding, solving problems & teamwork. I'm a quick learner that is motivated and driven to continuously grow & learn. I really enjoy leading teams & helping others develop, as well as creating amazing apps & services that are both user-friendly and visually appealing.</p>
+                        <p>A Full-Stack JavaScript developer with a passion for coding, solving problems & teamwork. I&apos;m a quick learner that is motivated and driven to continuously grow & learn. I really enjoy leading teams & helping others develop, as well as creating amazing apps & services that are both user-friendly and visually appealing.</p>
                     </TextContainer>
                 </InfoContainer>
             </Container>
