@@ -38,8 +38,8 @@ const Footer = () => {
     return (
         <FooterSection>
             <ToTopLink onClick={() => scroll.scrollToTop()}>^</ToTopLink>
-            <FooterLink href="https://github.com/KrizpCode">GitHub</FooterLink>
-            <FooterLink href="https://www.linkedin.com/in/johaneriksson93/">LinkedIn</FooterLink>
+            <FooterLink target='blank' rel="noopener noreferrer" href="https://github.com/KrizpCode">GitHub</FooterLink>
+            <FooterLink target='blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/johaneriksson93/">LinkedIn</FooterLink>
         </FooterSection>
     )
 }
