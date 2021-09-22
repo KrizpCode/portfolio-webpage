@@ -100,8 +100,8 @@ const ProjectCard: React.FC<Props> = ({ projects }) => {
                             </TagsContainer>
                             {documentToReactComponents(project.fields.description)}
                             <ButtonContainer>
-                                <ButtonLink href={project.fields.liveDemo} className='blue'>Live Demo</ButtonLink>
-                                <ButtonLink href={project.fields.githubLink} className='pink'>Code Repo</ButtonLink>
+                                <ButtonLink target='blank' rel="noopener noreferrer" href={project.fields.liveDemo} className='blue'>Live Demo</ButtonLink>
+                                <ButtonLink target='blank' rel="noopener noreferrer" href={project.fields.githubLink} className='pink'>Code Repo</ButtonLink>
                             </ButtonContainer>
                         </CardInfo>
                     </Card>
