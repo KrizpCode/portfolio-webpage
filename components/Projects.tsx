@@ -64,7 +64,6 @@ const Projects = () => {
             <Title>PROJECTS</Title>
             <Container>
                 {projects && <ProjectCard projects={projects} />}
-                {projects && <ProjectCard projects={projects} />}
             </Container>
         </ProjectsSection>
     )
