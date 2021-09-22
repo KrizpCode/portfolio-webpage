@@ -9,10 +9,7 @@
     "replaceFilePaths": "node replacer.js",
     "dev": "next dev",
     "build": "next build && next export -o build && npm run replaceFilePaths",
-    "start": "next start",
-    "export": "next export -o build && npm run replaceFilePaths",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "next start"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.4.0",
