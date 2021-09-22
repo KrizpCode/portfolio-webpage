@@ -7,11 +7,12 @@ const FooterSection = styled.footer`
     color: #FFF;
     heigh: 60px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-height: 40vh;
     position: relative;
+    padding: 50px;
+    gap: 20px;
 `
 
 const ToTopLink = styled.a`
@@ -24,12 +25,21 @@ const ToTopLink = styled.a`
     margin-top: -20px;
 `
 
+const FooterLink = styled.a`
+    color: #E31B6D;
+    font-weight: 600;
+
+    &:hover {
+        color: #FCFCFC
+    }
+`
+
 const Footer = () => {
     const scrollToTop = (): void => {
         const element = document.getElementById(`header`)
         
         if (element) {
-            elementScrollIntoView(element, { behavior: "smooth", block: "center", inline: "center" });
+            elementScrollIntoView(element, { behavior: "smooth", block: "start", inline: "center" });
         }
 
         return
@@ -38,7 +48,8 @@ const Footer = () => {
     return (
         <FooterSection>
             <ToTopLink onClick={() => scrollToTop()}>^</ToTopLink>
-            <p>Johan 2021 All Rights Reserved</p>
+            <FooterLink href="https://github.com/KrizpCode">GitHub</FooterLink>
+            <FooterLink href="https://www.linkedin.com/in/johaneriksson93/">LinkedIn</FooterLink>
         </FooterSection>
     )
 }

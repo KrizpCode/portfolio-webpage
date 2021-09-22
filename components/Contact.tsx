@@ -6,16 +6,17 @@ const ContactSection = styled.section`
     background: #252934;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     color: #FCFCFC;
-    padding: 10px;
+    padding: 30px 10px;
 `
 
 const CustomForm = styled.form`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 100vh;
     width: 100%;
     max-width: 850px;
     gap: 5px;
@@ -69,6 +70,19 @@ const CustomSubmitButton = styled.input`
     }
 `
 
+const Title = styled.h2`
+    margin-top: 40px;
+    font-size: 9vw;
+    text-decoration: underline;
+    text-decoration-color: #04C2C9;
+
+    @media screen and (min-width: 850px) {
+        & {
+            font-size: 4.8rem;
+        }
+    }
+`
+
 const Contact = () => {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
@@ -97,6 +111,7 @@ const Contact = () => {
 
     return (
         <ContactSection id="contact">
+            <Title>CONTACT</Title>
             <CustomForm onSubmit={handleSubmit}>
                 <CustomInputField
                     type="text"

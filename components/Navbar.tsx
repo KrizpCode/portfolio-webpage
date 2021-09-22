@@ -112,7 +112,7 @@ const Navbar = () => {
         const element = document.getElementById(`${idName}`)
         
         if (element) {
-            elementScrollIntoView(element, { behavior: "smooth", block: "center", inline: "center" });
+            elementScrollIntoView(element, { behavior: "smooth", block: "start", inline: "center" });
         }
 
         return

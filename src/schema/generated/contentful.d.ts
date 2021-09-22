@@ -7,26 +7,20 @@ export interface IProjectFields {
   /** Title */
   title: string;
 
-  /** Slug */
-  slug: string;
-
   /** Thumbnail */
   thumbnail: Asset;
 
-  /** Featured Image */
-  featuredImage: Asset;
-
-  /** Front-End */
-  frontEnd?: string[] | undefined;
-
-  /** Back-End */
-  backEnd?: string[] | undefined;
-
-  /** Other */
-  other?: string[] | undefined;
+  /** Packages */
+  packages: string[];
 
   /** Description */
   description: Document;
+
+  /** Github Link */
+  githubLink: string;
+
+  /** Live Demo */
+  liveDemo?: string | undefined;
 }
 
 export interface IProject extends Entry<IProjectFields> {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { elementScrollIntoView } from "seamless-scroll-polyfill";
 
 import ScrollDownAnimation from "./ScrollDownAnimation"
 
@@ -60,6 +61,16 @@ const WorkButton = styled.button`
 `
 
 const Header = () => {
+    const scrollToProjects = (): void => {
+        const element = document.getElementById(`projects`)
+        
+        if (element) {
+            elementScrollIntoView(element, { behavior: "smooth", block: "start", inline: "center" });
+        }
+
+        return
+    }
+
     return (
         <HeaderSection id="header">
             <Wrapper>
@@ -67,7 +78,7 @@ const Header = () => {
             <SubHeading>I'm <NameSpan>Johan Eriksson</NameSpan></SubHeading>
             <SubHeading>a <WorkSpan>Full-Stack Developer</WorkSpan></SubHeading>
             </Wrapper>
-            <WorkButton>View My Work</WorkButton>
+            <WorkButton onClick={() => scrollToProjects()}>My Projects</WorkButton>
             <ScrollDownAnimation />
         </HeaderSection>
     )
