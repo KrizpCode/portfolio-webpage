@@ -92,10 +92,10 @@ const Contact = () => {
         e.preventDefault();
 
         emailjs.sendForm(
-            'service_e9a1xtp',
-            'template_15uhwqm',
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
             e.target as HTMLFormElement,
-            'user_y22ixgVbHX10ykOHCmmRa'
+            process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
         ).then( res => {
             console.log(res);
         }).catch( err => console.error(err));
