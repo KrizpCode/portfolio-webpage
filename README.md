@@ -8,7 +8,7 @@ For animations I use **GSAP**, and **Styled Components** for styling.
 
 https://johan-eriksson.vercel.app/
 
-## Frameworks & Libraries
+## Tools used
 
 * NextJS
 * TypeScript
